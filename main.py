@@ -1,3 +1,5 @@
+from stats import wordstring
+
 def get_book_text(path_to_file):
 	# Open the file within the 'with' statement
 	with open(path_to_file) as f:
@@ -6,8 +8,12 @@ def get_book_text(path_to_file):
 	# Return the contents (the file automatically closes here)
 	return content
 
+
+
+
 def main():
 	booktext = get_book_text("books/frankenstein.txt")
-	print(booktext)
+	# print(booktext)
+	wordcount = wordstring(booktext)
 
 main()
